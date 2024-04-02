@@ -13,9 +13,9 @@ jobs:
       - name: Set up AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
         with:
-          aws-access-key-id: ${{ secrets.AKIA2UC3CW7MO5Q3MBLU }}
-          aws-secret-access-key: ${{ secrets.JAp9TM1xJ9RrQdGhz3pHCAHSbMOfU+2gFFM1310g }}
-          aws-region: ${{ secrets.us-east-2 }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
 
       - name: List S3 Buckets
         run: aws s3 ls
